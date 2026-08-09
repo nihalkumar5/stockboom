@@ -529,17 +529,23 @@ body {
 .results-section {
     padding: 4rem 0 8rem;
 }
-.results-showcase {
-    max-width: 800px;
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
     margin: 3rem auto 0;
 }
 .pnl-card {
-    background: #111;
-    border-radius: 16px;
-    padding: 2.5rem;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     text-align: left;
     color: #fff;
+    padding: 2.5rem;
+}
+.student-name {
+    color: #00ff88;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 5px;
 }
 .pnl-header {
     display: flex;
@@ -630,6 +636,9 @@ body {
         justify-content: center;
     }
     .pain-grid {
+        grid-template-columns: 1fr;
+    }
+    .results-grid {
         grid-template-columns: 1fr;
     }
     .transparent-nav {
