@@ -691,4 +691,13 @@ html, body {
     .hero-stats {
         gap: 1.5rem;
     }
+    .pnl-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pnl-card {
+        padding: 1.5rem;
+    }
+    .premium-glass-card {
+        padding: 1.5rem;
+    }
 }
