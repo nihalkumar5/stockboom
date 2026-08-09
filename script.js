@@ -118,4 +118,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', checkScroll);
     checkScroll(); // Check on load
+
+    // 5. Dynamic Content Loading from Backend
+    async function fetchDynamicContent() {
+        try {
+            const res = await fetch('/api/content');
+            if(res.ok) {
+                const data = await res.json();
+                
+                const titleEl = document.getElementById('dyn-heroTitle');
+                if(titleEl) titleEl.innerHTML = data.heroTitle;
+                
+                const subtitleEl = document.getElementById('dyn-heroSubtitle');
+                if(subtitleEl) subtitleEl.innerText = data.heroSubtitle;
+                
+                const formTitleEl = document.getElementById('dyn-formTitle');
+                if(formTitleEl) formTitleEl.innerText = data.formHeader.title;
+                
+                const formSubtitleEl = document.getElementById('dyn-formSubtitle');
+                if(formSubtitleEl) formSubtitleEl.innerText = data.formHeader.subtitle;
+            }
+        } catch (error) {
+            console.error('Failed to load dynamic content:', error);
+        }
+    }
+    fetchDynamicContent();
 });
