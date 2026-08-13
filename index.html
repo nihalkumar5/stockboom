@@ -89,7 +89,7 @@
                         <input type="hidden" name="_subject" value="New Lead: Strategy Session Booking">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="text" name="name" id="name" required placeholder="Full Name">
-                        <input type="tel" name="whatsapp" id="whatsapp" required placeholder="WhatsApp Number">
+                        <input type="tel" name="whatsapp" id="whatsapp" required placeholder="WhatsApp Number" maxlength="10" minlength="10" pattern="[0-9]{10}" title="Please enter exactly 10 digits">
                         <input type="email" name="email" id="email" required placeholder="Email Address">
                     </div>
 
